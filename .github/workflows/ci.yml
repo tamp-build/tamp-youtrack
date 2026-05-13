@@ -55,13 +55,13 @@ jobs:
             nuget-${{ runner.os }}-
 
       - name: Restore
-        run: dotnet restore Tamp.AdoRest.slnx
+        run: dotnet restore Tamp.YouTrack.slnx
 
       - name: Build
-        run: dotnet build Tamp.AdoRest.slnx --no-restore --configuration Release
+        run: dotnet build Tamp.YouTrack.slnx --no-restore --configuration Release
 
       - name: Test
-        run: dotnet test Tamp.AdoRest.slnx --no-build --configuration Release --logger "trx;LogFileName=test-results.trx" --results-directory ./TestResults
+        run: dotnet test Tamp.YouTrack.slnx --no-build --configuration Release --logger "trx;LogFileName=test-results.trx" --results-directory ./TestResults
 
       - name: Upload test results
         if: always()
