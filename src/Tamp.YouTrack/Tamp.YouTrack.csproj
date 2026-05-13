@@ -10,7 +10,12 @@
     <PackageId>Tamp.YouTrack</PackageId>
     <Description>Tamp library-mode wrapper for the YouTrack REST API. Typed surface for issues (create / update / search / set-state) — the surface tamp-build itself uses for ticket management. Bearer auth via Secret-typed permanent token. Built on Tamp.Http. v0.1.0 ships the issue-tracker minimum-useful surface; expand on adopter demand.</Description>
     <IsPackable>true</IsPackable>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="$(TampCorePath)" Condition="'$(TampCoreMode)' == 'project'" />
