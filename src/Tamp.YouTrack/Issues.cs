@@ -19,6 +19,7 @@ public sealed class IssuesClient
     /// <param name="summary">Issue title (required).</param>
     /// <param name="description">Markdown-supporting body. Optional.</param>
     /// <param name="customFields">Optional custom-field payloads — pass typed values via <see cref="CustomFieldValue"/> helpers.</param>
+    /// <param name="ct">Token to cancel the request.</param>
     public async Task<Issue> CreateAsync(
         string projectId,
         string summary,
